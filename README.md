@@ -8,8 +8,8 @@ If you found this codebase useful in your research, please consider citing:
 
 ```
 @misc{fagin2024jointmodelingquasarvariability,
-      title={Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent Stochastic Differential Equation}, 
-      author={Joshua Fagin and James Hung-Hsu Chan and Henry Best and Matthew O'Dowd},
+      title={Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent Stochastic Differential Equations}, 
+      author={Joshua Fagin and James Hung-Hsu Chan and Henry Best and Matthew O'Dowd and K. E. Saavik Ford and Matthew J. Graham and Ji Won Park and V. Ashley Villar},
       year={2024},
       eprint={2410.18423},
       archivePrefix={arXiv},
