@@ -1,6 +1,6 @@
 # Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent SDEs
 
-Code for "Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent Stochastic Differential Equations"
+Code for "Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent Stochastic Differential Equations" [[arXiv]](https://arxiv.org/abs/2410.18423).
 
 ## Citation
 
