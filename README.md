@@ -1,6 +1,6 @@
 # Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent SDEs
 
-Code for "Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent Stochastic Differential Equations" Coming soon (sorry in a couple weeks)!
+Code for "Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent Stochastic Differential Equations"
 
 ## Citation
 
@@ -37,6 +37,7 @@ journal = {The Astrophysical Journal},
 
 ### Contact
 For inquiries, reach out to: jfagin@gradcenter.cuny.edu
+
 The only thing not included is the rest of the LSST cadence files. Here I can only fit ten as an example but I train with 100,000.
 
 ### See also a more general version of latent SDEs in:
