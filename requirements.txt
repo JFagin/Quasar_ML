@@ -1,0 +1,11 @@
+numpy
+matplotlib
+scipy
+torch
+torchsde
+tqdm
+astropy
+gpytorch
+botorch
+corner
+speclite
