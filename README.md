@@ -36,9 +36,7 @@ journal = {The Astrophysical Journal},
 ```
 
 ### Contact
-For inquiries, reach out to: jfagin@gradcenter.cuny.edu
-
-The only thing not included is the rest of the LSST cadence files. Here I can only fit ten as an example but I train with 100,000.
+For inquiries or to request the rest of the LSST cadence files or trained model, reach out to: jfagin@gradcenter.cuny.edu
 
 ### See also a more general version of latent SDEs in:
 
