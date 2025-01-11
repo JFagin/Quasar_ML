@@ -13,7 +13,7 @@ Code for "Joint Modeling of Quasar Variability and Accretion Disk Reprocessing u
 We use simulated ten year quasar [light curves](https://en.wikipedia.org/wiki/Light_curve) across six different bandpasses (*ugrizy*) in preperation for the [Rubin Observatory Legacy Survey of Space and Time (LSST)](https://en.wikipedia.org/wiki/Vera_C._Rubin_Observatory). Simulated LSST observations and photometric errors are included using [rubin_sim](https://github.com/lsst/rubin_sim). We show our method outperforms a Gaussian process regression baseline at reconstructing the light curves, including with out-of-distribution driving signals. Furthermore, our model can predict the broken power-law power spectrum parameters of the driving signal and the physical parameters of the accretion disk such as the black hole mass, Eddington ratio, temperature slope, and redshift, even for the out-of-distribution driving signals. 
 
 <p align="center">
-  <img width="600" src="assets/model_architecture.png">
+  <img width="700" src="assets/model_architecture.png">
 </p>
 
 ## Citation
