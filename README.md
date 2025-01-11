@@ -3,7 +3,7 @@
 Code for "Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent Stochastic Differential Equations" [[arXiv]](https://arxiv.org/abs/2410.18423). 
 
 <p align="center">
-  <img width="750" src="assets/recovery_with_driving_and_kernel.png">
+  <img width="700" src="assets/recovery_with_driving_and_kernel.png">
 </p>
 
 ## Background
