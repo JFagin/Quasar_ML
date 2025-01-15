@@ -58,7 +58,7 @@ https://iopscience.iop.org/article/10.3847/1538-4357/ad2988
 
 https://github.com/JFagin/latent_SDE
 
-### References
+### Main References
 - Joshua Fagin, James Hung-Hsu Chan, Henry Best, Matthew O'Dowd, K. E. Saavik Ford, Matthew J. Graham, Ji Won Park, V. Ashley Villar. "Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent Stochastic Differential Equations". 2025. [[arXiv]](https://arxiv.org/abs/2410.18423)
 - Joshua Fagin, Ji Won Park, Henry Best, James Hung-Hsu Chan, K.E Saavik Ford, Matthew J. Graham, V. Ashley Villar, Shirley Ho, Matthew O'Dowd. "Latent Stochastic Differential Equations for Modeling Quasar Variability and Inferring Black Hole Properties". 2024. *ApJ,* [[arXiv]](https://arxiv.org/abs/2304.04277) 
 - Matthew J. Temple, Paul C. Hewett, Manda Banerji. "Modelling type 1 quasar colours in the era of Rubin and Euclid". *MNRAS.* 2021. [[arXiv]](https://arxiv.org/abs/2109.04472)
