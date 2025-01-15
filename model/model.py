@@ -1592,9 +1592,6 @@ class LatentSDE(nn.Module):
             assert self.give_redshift == False, "redshift is None but give_redshift is True"
 
         if self.relative_mean_time and mean_time_true is not None:
-            #mean_time_true = mean_time_true - mean_time_true[:,0:1] # subtract the time from the u-band. Only the relative time delays are important.
-            #mean_time_true = mean_time_true[:,1:] # Get rid of the first time delay, since it is always 0.0
-
             # subtract the time from the reference band. Only the relative time delays are important.
             mean_time_true = mean_time_true - mean_time_true[:, self.reference_band].unsqueeze(1) 
             # Get rid of the first time delay, since it is always 0.0
@@ -1616,28 +1613,13 @@ class LatentSDE(nn.Module):
         mean_time_pred_list = []
 
         # the extra padding because we need to get rid of extra times from the convolution
-        #padding_size = int((self.kernel_num_days - 1)/self.driving_resolution)+1
         padding_size = int(self.kernel_num_days/self.driving_resolution)-1
-        # driving signal starts with zeros
-        #driving = torch.zeros(xs.shape[0], xs.shape[1]+padding_size, 1).type_as(xs).to(xs.device) 
-        #driving = driving + mean[:, :, 0].unsqueeze(-1) # put the driving signal back in the original scale
 
         params_accretion = torch.zeros(xs.shape[0], self.num_Gaussian_parameterization*self.n_params_accretion, dtype=dtype, device=device)
         gaussian_mixture_coefficients_not_normalized = torch.zeros(xs.shape[0], self.num_Gaussian_parameterization, dtype=dtype, device=device)
 
-        ### CHANGED ###
-        # We don't actually need to perform the convolution since we start with a constant driving signal
-        #_xs = self.flux_to_mag(self.mag_to_flux(driving)*self.freq_effective[0]/self.freq_effective)
-        #_xs = self.flux_to_mag(self.mag_to_flux(driving)*torch.mean(self.freq_effective)/self.freq_effective)
-        #_xs = _xs[:,padding_size:]
-        #_xs = (_xs-mean)/std # normalize the predicted light curve
-        #_xs = torch.zeros(xs.shape[0], xs.shape[1], self.num_bands, dtype=dtype, device=device) +self.epsilon
-
+        # Initialize the reconstruction to zero
         _xs_pad = torch.zeros(xs.shape[0], xs.shape[1]+padding_size, self.num_bands, dtype=dtype, device=device)
-        #_xs_pad[:,padding_size:] = _xs
-        #del _xs
-
-        #log_var_pad = torch.zeros(xs.shape[0], xs.shape[1]+padding_size, self.num_bands, dtype=dtype, device=device)
 
         # initialize the driving signal latent space to zero
         z0 = torch.zeros(xs.shape[0], self.driving_latent_size, dtype=dtype, device=device)
