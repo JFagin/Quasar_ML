@@ -194,13 +194,13 @@ cosmo = FlatLambdaCDM(H0=70 * u.km / u.s / u.Mpc, Om0=0.3)
 
 # For our spectrum model
 # Taken from https://github.com/MJTemple/qsogen
-f1 = 'model/qsogen/qsosed_emlines_20210625.dat'
+f1 = 'model/qsogen_files/qsosed_emlines_20210625.dat'
 # wav, median_emlines, continuum, peaky_line, windy_lines, narrow_lines
 emline_template = np.genfromtxt(f1, unpack=True)
 
 # S0 galaxy template from SWIRE
 # https://ui.adsabs.harvard.edu/abs/2008MNRAS.386..697R/
-f2 = 'model/qsogen/S0_template_norm.sed'
+f2 = 'model/qsogen_files/S0_template_norm.sed'
 galaxy_template = np.genfromtxt(f2, unpack=True)
 
 
@@ -208,7 +208,7 @@ galaxy_template = np.genfromtxt(f2, unpack=True)
 # Recall flux_reddened(lambda) = flux(lambda)*10^(-A(lambda)/2.5)
 # where A(lambda) = E(B-V)*[E(lambda-V)/E(B-V) + R] 
 # so taking R=3.1, A(lambda) = E(B-V)*[Col#2 + 3.1]
-f3 = 'model/qsogen/pl_ext_comp_03.sph'
+f3 = 'model/qsogen_files/pl_ext_comp_03.sph'
 reddening_curve = np.genfromtxt(f3, unpack=True)
 
 
