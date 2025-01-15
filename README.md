@@ -61,7 +61,8 @@ https://github.com/JFagin/latent_SDE
 ### References
 - Joshua Fagin, James Hung-Hsu Chan, Henry Best, Matthew O'Dowd, K. E. Saavik Ford, Matthew J. Graham, Ji Won Park, V. Ashley Villar. "Joint Modeling of Quasar Variability and Accretion Disk Reprocessing using Latent Stochastic Differential Equations". 2025. [[arXiv]](https://arxiv.org/abs/2410.18423)
 - Joshua Fagin, Ji Won Park, Henry Best, James Hung-Hsu Chan, K.E Saavik Ford, Matthew J. Graham, V. Ashley Villar, Shirley Ho, Matthew O'Dowd. "Latent Stochastic Differential Equations for Modeling Quasar Variability and Inferring Black Hole Properties". 2024. *ApJ,* [[arXiv]](https://arxiv.org/abs/2304.04277) 
-- Xuechen Li, Ting-Kam Leonard Wong, Ricky T. Q. Chen, David Duvenaud. "Scalable Gradients for Stochastic Differential Equations". *International Conference on Artificial Intelligence and Statistics.* 2020. [[arXiv]](https://arxiv.org/pdf/2001.01328.pdf)
+- Matthew J. Temple, Paul C. Hewett, Manda Banerji. "Modelling type 1 quasar colours in the era of Rubin and Euclid". *MNRAS.* 2021. [[arXiv]](https://arxiv.org/abs/2109.04472)
+- Xuechen Li, Ting-Kam Leonard Wong, Ricky T. Q. Chen, David Duvenaud. "Scalable Gradients for Stochastic Differential Equations". *International Conference on Artificial Intelligence and Statistics.* 2020. [[arXiv]](https://arxiv.org/abs/2001.01328)
 - Zhengping Che, Sanjay Purushotham, Kyunghyun Cho, David Sontag, Yan Liu. "Recurrent Neural Networks for Multivariate Time Series with Missing Values
 ". *Nature.* 2018. [[arXiv]](https://arxiv.org/pdf/2001.01328.pdf)
 - Patrick Putzky, Max Welling. "Recurrent Inference Machines for Solving Inverse Problems". 2017. [[arXiv]](https://arxiv.org/abs/1706.04008)
