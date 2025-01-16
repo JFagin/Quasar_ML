@@ -4118,7 +4118,7 @@ def main(
         num_cpus_use_torch = int(max(int(total_cpus // world_size),1))
         
     else: 
-        max_cpus = 1
+        max_cpus = 1 if local else max_cpus
         total_cpus = min(multiprocessing.cpu_count(), max_cpus)
         num_cpus_use = int(max(int(total_cpus),1))
         num_cpus_use_torch = int(max(int(total_cpus),1))
