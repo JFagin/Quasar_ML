@@ -2777,13 +2777,12 @@ class Dataset_Loader(Dataset):
     """
     Pytorch Dataloader
     """
-    def __init__(self, kernel_num_days, kernel_resolution, seed_list, cadence, mag_mean, model_spectrum, cosmo, emline_template, galaxy_template, reddening_curve, min_magnitude, max_magnitude, reference_band, custom_driving_signal=None, use_LSST_cadence=0, augment=False, save_true_LC=False):
+    def __init__(self, kernel_num_days, kernel_resolution, seed_list, cadence, model_spectrum, cosmo, emline_template, galaxy_template, reddening_curve, min_magnitude, max_magnitude, reference_band, custom_driving_signal=None, use_LSST_cadence=0, augment=False, save_true_LC=False):
         """
         kernel_num_days: int, number of days in the transfer function kernels
         kernel_resolution: float, resolution of the transfer function kernels
         seed_list: list, list of seeds for the random number generator
         cadence: float, time spacing in the light curve
-        mag_mean: float, mean magnitude of the driving signal
         model_spectrum: bool, whether to model the spectrum to get the mean magnitude of each band, otherwise just select at random. Should be True except for testing.
         cosmo: astropy cosmology object, used to get the distance modulus for the redshift
         emline_template: numpy array, template for the emission lines
