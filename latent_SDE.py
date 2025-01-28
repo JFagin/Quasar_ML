@@ -1482,7 +1482,6 @@ def get_observed_LC(LC,cadence_index,cadence, min_magnitude, max_magnitude, use_
                 else:
                     sigma_list_at_t = sigma_list[index_unique[j]:]
 
-                #new_sigma = np.sqrt(np.sum(sigma_list_at_t**2))/len(sigma_list_at_t)
                 # combine the photoemtric noise such that the final noise is lower than the individual noise
                 new_sigma = 1/np.sqrt(np.sum(1/sigma_list_at_t**2))
                 sigma_unique.append(new_sigma)
@@ -1493,7 +1492,6 @@ def get_observed_LC(LC,cadence_index,cadence, min_magnitude, max_magnitude, use_
             sigma_sys = 0.005
             sigma_unique = np.sqrt(sigma_sys**2 + sigma_unique**2)
 
-            #### CHANGED ####
             # We clip the photometric noise to have a maximum value of 1 mag, can lead to problems if the noise is too large
             sigma_unique = np.clip(sigma_unique,None,1.0)
 
@@ -4115,17 +4113,13 @@ def main(
         total_cpus = min(multiprocessing.cpu_count(),max_cpus)
         print(f'max cpus used: {total_cpus}')
         num_cpus_use = int(max(int(total_cpus // world_size),1))
-        num_cpus_use_torch = int(max(int(total_cpus // world_size),1))
         
     else: 
         max_cpus = 1 if local else max_cpus
         total_cpus = min(multiprocessing.cpu_count(), max_cpus)
         num_cpus_use = int(max(int(total_cpus),1))
-        num_cpus_use_torch = int(max(int(total_cpus),1))
-
 
     print(f'using {num_cpus_use} cpus for data loader')
-    print(f'using {num_cpus_use_torch} cpus for torch multiprocessing')
 
     if use_GPU and torch.cuda.is_available():
         print(f'GPU type: {torch.cuda.get_device_name()}')
